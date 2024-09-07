@@ -14,4 +14,9 @@ class Responsibility extends Model
         'description',
         'sort_order',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }
