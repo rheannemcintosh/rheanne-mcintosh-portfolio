@@ -16,6 +16,14 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
-        @inertia
+        <div class="flex py-4  border-b-4 border-green-700">
+            <div class="m-auto justify-center items-center text-green-700">
+                <h1 class="text-7xl font-bold text-center">Rheanne McIntosh</h1>
+                <h2 class="text-4xl text-center">Lead Software Engineer</h2>
+            </div>
+        </div>
+        <div class="m-4 max-w-3xl mx-auto">
+            @inertia
+        </div>
     </body>
 </html>
