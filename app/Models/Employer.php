@@ -19,4 +19,9 @@ class Employer extends Model
         'my_location',
         'employer_location',
     ];
+
+    public function roles()
+    {
+        return $this->hasMany(Role::class);
+    }
 }
