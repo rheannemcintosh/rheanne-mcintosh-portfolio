@@ -16,9 +16,14 @@ class Role extends Model
         'end_date',
         'is_current_role',
     ];
-    
+
     public function employer()
     {
         return $this->belongsTo(Employer::class);
+    }
+
+    public function responsibilities()
+    {
+        return $this->hasMany(Responsibility::class);
     }
 }
