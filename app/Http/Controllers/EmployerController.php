@@ -13,7 +13,11 @@ class EmployerController extends Controller
      */
     public function index()
     {
-        //
+        $employers = Employer::with('roles.responsibilities')->get();
+
+        return Inertia::render('Employers/Index', [
+            'employers' => $employers,
+        ]);
     }
 
     /**
