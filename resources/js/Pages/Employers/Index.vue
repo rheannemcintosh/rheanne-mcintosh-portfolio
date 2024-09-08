@@ -84,8 +84,8 @@
 
                         <!-- Employer Name and Role -->
                         <div class="flex items-center">
-                            <h3 v-if="employer.roles.length === 1" class="text-lg font-bold uppercase">
-                                {{ employer.roles.length === 1 ? employer.roles[0].title : 'Various Roles,' }},
+                            <h3 class="text-lg font-bold uppercase">
+                                {{ employer.roles.length === 1 ? employer.roles[0].title :  "Various Roles" }},
                             </h3>
                             <h4 id="name" class="text-lg pl-2">{{ employer.name }}</h4>
                         </div>
