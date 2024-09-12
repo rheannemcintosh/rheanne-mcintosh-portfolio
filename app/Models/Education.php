@@ -18,7 +18,6 @@ class Education extends Model
         'is_remote_education',
         'my_location',
         'education_location',
-        'show_on_cv',
         'sort_order',
         'show_on_cv',
     ];
