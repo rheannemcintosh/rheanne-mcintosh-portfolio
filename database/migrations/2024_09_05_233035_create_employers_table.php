@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->dateTime('start_date')->nullable();
             $table->dateTime('end_date')->nullable();
-            $table->boolean('is_current_employer')->default(false);;
+            $table->boolean('is_current_employer')->default(false);
             $table->boolean('is_remote_employer')->default(false);
             $table->string('my_location')->nullable();
             $table->string('employer_location')->nullable();

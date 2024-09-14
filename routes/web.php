@@ -13,7 +13,7 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
-//        'employers' => Employer::all(),
+        //        'employers' => Employer::all(),
     ]);
 });
 
@@ -26,7 +26,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
 
 Route::prefix('cv')->group(function () {
     Route::get('/employers', [EmployerController::class, 'index'])->name('employers.index');
