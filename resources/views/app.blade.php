@@ -10,13 +10,14 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" />
         <!-- Scripts -->
         @routes
         @vite(['resources/css/app.css', 'resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased">
-        <div class="flex py-4  border-b-4 border-green-700">
+    <body class="font-sans antialiased bg-gray-50">
+        <div class="flex py-4 border-b-4 border-green-700">
             <div class="m-auto justify-center items-center text-green-700">
                 <h1 class="text-7xl font-bold text-center">Rheanne McIntosh</h1>
                 <h2 class="text-4xl text-center">Lead Software Engineer</h2>

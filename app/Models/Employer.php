@@ -18,6 +18,7 @@ class Employer extends Model
         'is_remote_employer',
         'my_location',
         'employer_location',
+        'show_on_cv',
     ];
 
     public function roles()

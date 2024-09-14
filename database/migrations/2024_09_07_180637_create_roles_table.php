@@ -19,6 +19,8 @@ return new class extends Migration
             $table->dateTime('start_date')->nullable();
             $table->dateTime('end_date')->nullable();
             $table->boolean('is_current_role')->default(false);
+            $table->integer('sort_order')->default(0);
+            $table->boolean('show_on_cv')->default(true);
             $table->timestamps();
         });
     }
