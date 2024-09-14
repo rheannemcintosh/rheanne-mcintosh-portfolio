@@ -21,6 +21,8 @@ return new class extends Migration
             $table->boolean('is_remote_employer')->default(false);
             $table->string('my_location')->nullable();
             $table->string('employer_location')->nullable();
+            $table->integer('sort_order')->default(0);
+            $table->boolean('show_on_cv')->default(true);
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('role_id')->constrained();
             $table->text('description');
             $table->integer('sort_order')->default(0);
+            $table->boolean('show_on_cv')->default(true);
             $table->timestamps();
         });
     }
