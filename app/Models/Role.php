@@ -15,6 +15,7 @@ class Role extends Model
         'start_date',
         'end_date',
         'is_current_role',
+        'show_on_cv',
     ];
 
     public function employer()
