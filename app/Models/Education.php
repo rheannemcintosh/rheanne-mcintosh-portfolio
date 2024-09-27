@@ -21,4 +21,9 @@ class Education extends Model
         'sort_order',
         'show_on_cv',
     ];
+
+    public function degrees()
+    {
+        return $this->hasOne(Degree::class);
+    }
 }
