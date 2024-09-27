@@ -1,12 +1,18 @@
 <script setup lang="ts">
-    defineProps<{
+    const props = defineProps<{
         name: string;
         pillColour?: string;
     }>();
+
+    const emit = defineEmits(['pill-click']);
+
+    const handleClick = () => {
+        emit('pill-click', props.name);
+    }
 </script>
 
 <template>
-    <button @click.prevent="" class="m-1 px-8 rounded-xl font-bold text-white" :class="pillColour">
+    <button @click.prevent="handleClick" class="m-1 px-8 rounded-xl font-bold text-white" :class="pillColour">
         {{ name }}
     </button>
 </template>

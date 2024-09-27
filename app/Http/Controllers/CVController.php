@@ -2,16 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Education;
 use App\Models\Employer;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class EmployerController extends Controller
+class CVController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the CV page
+     *
+     * @return \Inertia\Response
      */
     public function index()
+    {
+        return Inertia::render('CV/Index',[
+            'education' => Education::with('degrees')->get(),
+            'employers' => $this->getEmployers(),
+        ]);
+    }
+
+    /**
+     * Get employers with roles and responsibilities
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    private function getEmployers()
     {
         $employers = Employer::where('show_on_cv', true)
             ->whereHas('roles', function ($query) {
@@ -40,56 +56,6 @@ class EmployerController extends Controller
             }
         }
 
-        return Inertia::render('Employers/Index', [
-            'employers' => $employers,
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return $employers;
     }
 }
