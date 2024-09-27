@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CVController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Employer;
 use Illuminate\Foundation\Application;
@@ -27,6 +28,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('cv')->group(function () {
+    Route::get('/', [CVController::class, 'index'])->name('cv.index');
 });
 
 require __DIR__.'/auth.php';
