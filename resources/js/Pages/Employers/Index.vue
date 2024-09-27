@@ -57,7 +57,7 @@ onMounted((): void => {
 
 <template>
     <!-- Experience Card -->
-    <div class="bg-white rounded-md shadow-2xl p-8">
+    <div class="bg-white rounded-md shadow-2xl p-8 mb-8">
         <!-- Experience Heading -->
         <CVHeading title="Experience" icon="work" />
 
