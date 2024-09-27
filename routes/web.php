@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\EducationController;
-use App\Http\Controllers\EmployerController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Employer;
 use Illuminate\Foundation\Application;
@@ -29,8 +27,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('cv')->group(function () {
-    Route::get('/employers', [EmployerController::class, 'index'])->name('employers.index');
-    Route::get('/education', [EducationController::class, 'index'])->name('education.index');
 });
 
 require __DIR__.'/auth.php';
