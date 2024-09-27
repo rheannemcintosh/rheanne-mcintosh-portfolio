@@ -21,7 +21,7 @@ class Employer extends Model
         'show_on_cv',
     ];
 
-    public function roles()
+    public function roles(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Role::class);
     }
