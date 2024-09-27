@@ -5,6 +5,6 @@ parameters:
     paths:
         - app/
         - tests/
-    level: 2
+    level: 3
     ignoreErrors:
             - '#Undefined variable: \$this#'
