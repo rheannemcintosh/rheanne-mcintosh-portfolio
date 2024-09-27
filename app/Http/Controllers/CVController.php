@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Education;
 use App\Models\Employer;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class CVController extends Controller
@@ -16,7 +15,7 @@ class CVController extends Controller
      */
     public function index()
     {
-        return Inertia::render('CV/Index',[
+        return Inertia::render('CV/Index', [
             'education' => Education::with('degrees')->get(),
             'employers' => $this->getEmployers(),
         ]);
@@ -38,23 +37,14 @@ class CVController extends Controller
             })
             ->with(['roles' => function ($query) {
                 $query->where('show_on_cv', true)
+                    ->orderBy('sort_order', 'desc')
                     ->with(['responsibilities' => function ($query) {
-                        $query->where('show_on_cv', true);
+                        $query->where('show_on_cv', true)
+                            ->orderBy('sort_order', 'desc');
                     }]);
             }])
+            ->orderBy('sort_order', 'desc')
             ->get();
-
-        foreach ($employers as $employer) {
-            $employer->roles = $employer->roles->sortBy(function ($role) {
-                return $role->sort_order;
-            });
-
-            foreach ($employer->roles as $role) {
-                $role->responsibilities = $role->responsibilities->sortBy(function ($responsibility) {
-                    return $responsibility->sort_order;
-                });
-            }
-        }
 
         return $employers;
     }

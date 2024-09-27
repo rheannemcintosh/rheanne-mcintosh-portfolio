@@ -22,7 +22,7 @@ class Education extends Model
         'show_on_cv',
     ];
 
-    public function degrees()
+    public function degrees(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(Degree::class);
     }
