@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Education;
 use App\Models\Employer;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class CVController extends Controller
@@ -16,7 +15,7 @@ class CVController extends Controller
      */
     public function index()
     {
-        return Inertia::render('CV/Index',[
+        return Inertia::render('CV/Index', [
             'education' => Education::with('degrees')->get(),
             'employers' => $this->getEmployers(),
         ]);
