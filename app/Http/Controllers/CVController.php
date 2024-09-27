@@ -9,10 +9,26 @@ use Inertia\Inertia;
 
 class CVController extends Controller
 {
+    /**
+     * Display the CV page
+     *
+     * @return \Inertia\Response
+     */
     public function index()
     {
-        $education = Education::with('degrees')->get();
+        return Inertia::render('CV/Index',[
+            'education' => Education::with('degrees')->get(),
+            'employers' => $this->getEmployers(),
+        ]);
+    }
 
+    /**
+     * Get employers with roles and responsibilities
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    private function getEmployers()
+    {
         $employers = Employer::where('show_on_cv', true)
             ->whereHas('roles', function ($query) {
                 $query->where('show_on_cv', true)
@@ -40,9 +56,6 @@ class CVController extends Controller
             }
         }
 
-        return Inertia::render('CV/Index',[
-            'education' => $education,
-            'employers' => $employers,
-        ]);
+        return $employers;
     }
 }
