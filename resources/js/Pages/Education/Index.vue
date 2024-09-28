@@ -68,7 +68,8 @@ onMounted((): void => {
                         <!-- Employer Name and Role -->
                         <div class="flex items-center">
                             <h3 class="text-lg font-bold uppercase">
-                                {{ degree.title }},
+                                {{ degree.abbreviation }}
+                                {{ degree.short_title ? degree.short_title : degree.title }},
                             </h3>
                             <h4 id="name" class="text-lg pl-2">{{ degree.university }}</h4>
                         </div>
