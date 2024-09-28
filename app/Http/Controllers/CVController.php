@@ -17,7 +17,7 @@ class CVController extends Controller
     public function index()
     {
         return Inertia::render('CV/Index', [
-            'degrees'   => Degree::orderBy('sort_order', 'DESC')->get(),
+            'degrees'   => Degree::where('show_on_cv', true)->orderBy('sort_order', 'DESC')->get(),
             'employers' => $this->getEmployers(),
         ]);
     }
