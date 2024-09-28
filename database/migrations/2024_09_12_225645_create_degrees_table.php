@@ -14,13 +14,20 @@ return new class extends Migration
         Schema::create('degrees', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('short_title')->nullable();
+            $table->string('type');
+            $table->string('abbreviation');
             $table->text('description')->nullable();
-            $table->foreignId('education_id')->constrained();
             $table->string('grade')->nullable();
             $table->dateTime('start_date')->nullable();
             $table->dateTime('end_date')->nullable();
             $table->boolean('is_current_degree')->default(false);
             $table->boolean('show_on_cv')->default(true);
+            $table->integer('sort_order')->default(0);
+            $table->string('university');
+            $table->boolean('is_remote_university')->default(false);
+            $table->string('my_location')->nullable();
+            $table->string('education_location');
             $table->timestamps();
         });
     }
