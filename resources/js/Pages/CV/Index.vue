@@ -6,7 +6,7 @@ import Education from "@/Pages/Education/Index.vue";
 import Employers from "@/Pages/Employers/Index.vue";
 
 const props = defineProps<{
-    education: Education[];
+    degrees: Degree[];
     employers: Employer[];
 }>();
 
@@ -27,7 +27,7 @@ const handlePillClick = (pillName: string) => {
 
     <div class="content">
         <Employers v-if="selectedPill === 'All' || selectedPill === 'Employers'" :employers="props.employers" />
-        <Education v-if="selectedPill === 'All' || selectedPill === 'Education'" :education="props.education" />
+        <Education v-if="selectedPill === 'All' || selectedPill === 'Education'" :degrees="props.degrees" />
     </div>
 </template>
 
