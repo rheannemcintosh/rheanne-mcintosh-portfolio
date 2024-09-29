@@ -15,16 +15,9 @@
         @routes
         @vite(['resources/css/app.css', 'resources/js/app.ts', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
+
     </head>
     <body class="font-sans antialiased bg-gray-50">
-        <div class="flex py-4 border-b-4 border-green-700">
-            <div class="m-auto justify-center items-center text-green-700">
-                <h1 class="text-7xl font-bold text-center">Rheanne McIntosh</h1>
-                <h2 class="text-4xl text-center">Lead Software Engineer</h2>
-            </div>
-        </div>
-        <div class="m-4 max-w-3xl mx-auto">
-            @inertia
-        </div>
+        @inertia
     </body>
 </html>
