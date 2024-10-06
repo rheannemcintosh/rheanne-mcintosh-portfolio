@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
             $table->string('skill');
-            $table->foreignId('skill_category_id')->constrained();
+            $table->enum('type', ['Primary', 'Secondary', 'Tertiary'])->nullable();
+            $table->foreignId('skill_category_id')->nullable()->constrained();
+            $table->integer('sort_order')->nullable();
+            $table->boolean('show_on_homepage')->default(false);
             $table->timestamps();
         });
     }

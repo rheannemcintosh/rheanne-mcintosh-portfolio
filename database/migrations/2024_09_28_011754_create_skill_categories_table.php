@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('skill_categories', function (Blueprint $table) {
             $table->id();
             $table->string('category');
-            $table->text('description');
-            $table->string('pill_class');
+            $table->text('description')->nullable();
+            $table->integer('sort_order')->nullable();
+            $table->string('pill_class')->nullable();
             $table->timestamps();
         });
     }
