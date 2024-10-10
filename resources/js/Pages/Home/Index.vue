@@ -2,13 +2,11 @@
 
 import Navigation from "@/Components/Unique/Navigation.vue";
 import SkillPill from "@/Pages/Home/Components/Skill-Pill.vue";
+import StandardLayout from "@/Layouts/StandardLayout.vue";
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col">
-        <!-- Navigation -->
-        <Navigation/>
-
+    <StandardLayout>
         <!-- Central Component -->
         <div class="flex-grow flex items-center justify-center bg-green-900">
             <div class="m-8 p-2 max-w-screen-lg">
@@ -70,6 +68,5 @@ import SkillPill from "@/Pages/Home/Components/Skill-Pill.vue";
                 </div>
             </div>
         </div>
-    </div>
-
+    </StandardLayout>
 </template>
