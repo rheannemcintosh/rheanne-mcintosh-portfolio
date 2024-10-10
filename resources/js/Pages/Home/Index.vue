@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import Navigation from "@/Components/Unique/Navigation.vue";
-import SkillPill from "@/Components/Unique/Skill-Pill.vue";
+import SkillPill from "@/Pages/Home/Components/Skill-Pill.vue";
 </script>
 
 <template>
