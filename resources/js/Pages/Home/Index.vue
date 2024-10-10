@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import Navigation from "@/Components/Unique/Navigation.vue";
+import SkillPill from "@/Components/Unique/Skill-Pill.vue";
 </script>
 
 <template>
@@ -49,31 +50,17 @@ import Navigation from "@/Components/Unique/Navigation.vue";
                             </div>
                             <div class="m-2">
                                 <div class="m-2 flex justify-center items-center flex-wrap">
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        Laravel
-                                    </span>
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        PHP
-                                    </span>
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        Jira
-                                    </span>
+                                    <SkillPill skill="Laravel"/>
+                                    <SkillPill skill="PHP"/>
+                                    <SkillPill skill="Jira"/>
                                 </div>
                                 <div class="m-2 flex justify-center items-center flex-wrap">
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        Tailwind Css
-                                    </span>
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        MySQL
-                                    </span>
+                                    <SkillPill skill="TailwindCSS"/>
+                                    <SkillPill skill="MySQL"/>
                                 </div>
                                 <div class="m-2 flex justify-center items-center flex-wrap">
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        Vue.js
-                                    </span>
-                                    <span class="m-1 px-8 py-1 rounded-xl bg-green-950 font-bold text-gray-50">
-                                        Project Management
-                                    </span>
+                                    <SkillPill skill="Vue.js"/>
+                                    <SkillPill skill="Project Management"/>
                                 </div>
                             </div>
                         </div>
