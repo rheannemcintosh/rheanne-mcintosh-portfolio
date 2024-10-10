@@ -71,11 +71,5 @@ import SkillPill from "@/Components/Unique/Skill-Pill.vue";
             </div>
         </div>
     </div>
-    <div class="bg-orange-300">
-        <h2>Hello</h2>
-    </div>
+
 </template>
-
-<style scoped>
-
-</style>
