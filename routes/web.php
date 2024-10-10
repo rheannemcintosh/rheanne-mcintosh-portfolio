@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('cv')->group(function () {
-    Route::get('/', [CVController::class, 'index'])->name('cv.index');
+    Route::get('/', [CVController::class, 'index'])->name('cv');
 });
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'home'])->name('home');
