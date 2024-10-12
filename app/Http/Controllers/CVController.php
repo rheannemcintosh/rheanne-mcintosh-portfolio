@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Degree;
 use App\Models\Education;
 use App\Models\Employer;
+use App\Models\ProfessionalSummary;
 use Inertia\Inertia;
 
 class CVController extends Controller
@@ -17,8 +18,9 @@ class CVController extends Controller
     public function index()
     {
         return Inertia::render('CV/Index', [
-            'degrees'   => Degree::where('show_on_cv', true)->orderBy('sort_order', 'DESC')->get(),
-            'employers' => $this->getEmployers(),
+            'degrees'                => Degree::where('show_on_cv', true)->orderBy('sort_order', 'DESC')->get(),
+            'employers'              => $this->getEmployers(),
+            'professional_summaries' => ProfessionalSummary::first(),
         ]);
     }
 
