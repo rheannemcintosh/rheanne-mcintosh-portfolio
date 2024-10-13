@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean('is_current_role')->default(false);
             $table->integer('sort_order')->default(0);
             $table->boolean('show_on_cv')->default(true);
+            $table->json('skills')->nullable();
             $table->timestamps();
         });
     }

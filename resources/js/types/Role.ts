@@ -4,4 +4,5 @@ export interface Role {
     id: number;
     title: string;
     responsibilities: Responsibility[];
+    skills: string;
 }
