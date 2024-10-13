@@ -7,11 +7,13 @@ import Employers from "@/Pages/Employers/Index.vue";
 import About from "@/Pages/CV/Components/About.vue";
 import Navigation from "@/Components/Unique/Navigation.vue";
 import StandardLayout from "@/Layouts/StandardLayout.vue";
+import {Skill} from "@/types/Skill";
 
 const props = defineProps<{
     professional_summaries?: ProfessionalSummary;
     degrees: Degree[];
     employers: Employer[];
+    skills: Record<number, Skill>;
 }>();
 
 const selectedPill = ref('All');
@@ -34,7 +36,7 @@ const handlePillClick = (pillName: string) => {
 
             <div class="content">
                 <About v-if="selectedPill === 'All' || selectedPill === 'About'" :professional_summaries="props.professional_summaries" />
-                <Employers v-if="selectedPill === 'All' || selectedPill === 'Employers'" :employers="props.employers" />
+                <Employers v-if="selectedPill === 'All' || selectedPill === 'Employers'" :employers="props.employers" :skills="props.skills" />
                 <Education v-if="selectedPill === 'All' || selectedPill === 'Education'" :degrees="props.degrees" />
             </div>
         </div>
