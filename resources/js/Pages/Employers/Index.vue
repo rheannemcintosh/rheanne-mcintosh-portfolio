@@ -3,10 +3,13 @@
 import { ref, onMounted } from 'vue';
 import CVHeading from '@/Components/CVHeading.vue';
 import { Employer } from '@/types/Employer';
+import Pill from "@/Components/Unique/Pill.vue";
+import {Skill} from "@/types/Skill";
 
 // Define the props for the component
 const props = defineProps<{
     employers: Employer[];
+    skills: Record<number, Skill>;
 }>();
 
 // Define a reactive variable to store which employers are open
@@ -24,6 +27,10 @@ function toggleOpen(employerId: number): void {
         openEmployers.value.push(employerId);
     }
 }
+
+const getSkillName = (skillId: number): string => {
+    return props.skills[skillId] ? props.skills[skillId].skill : 'Unknown skill';
+};
 
 /**
  * Format a date to a human-readable format (e.g. MAR 2022)
@@ -53,6 +60,16 @@ onMounted((): void => {
         }
     });
 });
+
+const decodeSkills = (skillsJson: string): number[] => {
+    try {
+        return JSON.parse(skillsJson); // Decode the JSON string into an array of skill IDs
+    } catch (e) {
+        console.error('Error decoding skills JSON', e);
+        return [];
+    }
+};
+
 </script>
 
 <template>
@@ -124,6 +141,10 @@ onMounted((): void => {
                                     </ul>
                                 </div>
                             </div>
+
+                            <span v-for="skillID in decodeSkills(role.skills)" :key="skillID">
+                                <Pill :name="getSkillName(skillID)" pillColour="green-pill" />
+                            </span>
                         </div>
                     </div>
                 </div>
