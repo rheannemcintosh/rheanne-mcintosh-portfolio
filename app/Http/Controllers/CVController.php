@@ -6,6 +6,7 @@ use App\Models\Degree;
 use App\Models\Education;
 use App\Models\Employer;
 use App\Models\ProfessionalSummary;
+use App\Models\Skill;
 use Inertia\Inertia;
 
 class CVController extends Controller
@@ -20,6 +21,7 @@ class CVController extends Controller
         return Inertia::render('CV/Index', [
             'degrees'                => Degree::where('show_on_cv', true)->orderBy('sort_order', 'DESC')->get(),
             'employers'              => $this->getEmployers(),
+            'skills'                 => Skill::all()->keyBy('id'),
             'professional_summaries' => ProfessionalSummary::first(),
         ]);
     }
