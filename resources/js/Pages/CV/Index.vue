@@ -29,6 +29,7 @@ const handlePillClick = (pillName: string) => {
         <div class="m-4 max-w-3xl mx-auto">
             <div class="my-8">
                 <pill name="All" pillColour="green-pill" @pill-click="handlePillClick"/>
+            <PageHeading title="CV" />
                 <pill name="About" pillColour="green-pill" @pill-click="handlePillClick"/>
                 <pill name="Employers" pillColour="green-pill" @pill-click="handlePillClick"/>
                 <pill name="Education" pillColour="green-pill" @pill-click="handlePillClick"/>
