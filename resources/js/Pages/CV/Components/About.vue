@@ -3,6 +3,7 @@
 import CVHeading from "@/Components/CVHeading.vue";
 import {Degree} from "@/types/Degree";
 import {ProfessionalSummary} from "@/types/ProfessionalSummary";
+import Card from "@/Components/Cards/Card.vue";
 
 const props = defineProps<{
     professional_summaries?: ProfessionalSummary;
@@ -10,8 +11,9 @@ const props = defineProps<{
 </script>
 
 <template>
+
     <!-- Experience Card -->
-    <div class="bg-white rounded-md shadow-2xl p-8 mb-8">
+    <Card>
         <!-- Experience Heading -->
         <CVHeading title="About" icon="person" />
 
@@ -21,7 +23,8 @@ const props = defineProps<{
                 {{ props.professional_summaries?.professional_summary_text }}
             </p>
         </div>
-    </div>
+    </Card>
+
 </template>
 
 <style scoped>

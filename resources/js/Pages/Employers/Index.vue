@@ -5,6 +5,7 @@ import CVHeading from '@/Components/CVHeading.vue';
 import { Employer } from '@/types/Employer';
 import Pill from "@/Components/Unique/Pill.vue";
 import {Skill} from "@/types/Skill";
+import Card from "@/Components/Cards/Card.vue";
 
 // Define the props for the component
 const props = defineProps<{
@@ -73,8 +74,9 @@ const decodeSkills = (skillsJson: string): number[] => {
 </script>
 
 <template>
+
     <!-- Experience Card -->
-    <div class="bg-white rounded-md shadow-2xl p-8 mb-8">
+    <Card>
         <!-- Experience Heading -->
         <CVHeading title="Experience" icon="work" />
 
@@ -150,5 +152,6 @@ const decodeSkills = (skillsJson: string): number[] => {
                 </div>
             </div>
         </div>
-    </div>
+    </Card>
+
 </template>
