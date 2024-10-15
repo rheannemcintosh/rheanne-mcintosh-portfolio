@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <footer class="mt-auto bg-green-950 text-white p-4">
+    <footer class="mt-auto bg-rmDark text-white p-4 border-t-2 border-rmLight">
         <div class="container mx-auto text-center">
             <p class="pb-2">&copy; {{ currentYear }} Rheanne McIntosh</p>
 
