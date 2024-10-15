@@ -4,6 +4,7 @@ import { ref, onMounted } from 'vue';
 
 import CVHeading from "@/Components/CVHeading.vue";
 import { Degree } from '@/types/Degree';
+import Card from "@/Components/Cards/Card.vue";
 
 // Define the props for the component
 const props = defineProps<{
@@ -49,7 +50,7 @@ onMounted((): void => {
 
 <template>
     <!-- Experience Card -->
-    <div class="bg-white rounded-md shadow-2xl p-8 mb-8">
+    <Card>
         <!-- Experience Heading -->
         <CVHeading title="University Education" icon="school" />
 
@@ -104,5 +105,5 @@ onMounted((): void => {
                 </div>
             </div>
         </div>
-    </div>
+    </Card>
 </template>
