@@ -30,6 +30,15 @@ const handlePillClick = (pillName: string) => {
             <div class="my-8">
                 <pill name="All" pillColour="green-pill" @pill-click="handlePillClick"/>
             <PageHeading title="CV" />
+
+            <PageIntroduction>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sem nec justo pretium gravida. Vivamus diam lorem, accumsan ac laoreet quis, tristique ac ex. Curabitur egestas nisl velit, facilisis ornare metus vulputate non. In hac habitasse platea dictumst.
+                <a href="">
+                    <span class="text-rmAccent underline font-bold">
+                        You can download a copy of my latest CV here!
+                    </span>
+                </a>
+            </PageIntroduction>
                 <pill name="About" pillColour="green-pill" @pill-click="handlePillClick"/>
                 <pill name="Employers" pillColour="green-pill" @pill-click="handlePillClick"/>
                 <pill name="Education" pillColour="green-pill" @pill-click="handlePillClick"/>
