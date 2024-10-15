@@ -8,7 +8,7 @@
 
 <template>
 
-    <body class="bg-green-900">
+    <body>
 
         <div class="min-h-screen flex flex-col ">
 
@@ -23,5 +23,13 @@
         <Footer :show-privacy-policy="false" :show-c-v="false" />
 
     </body>
-    
+
 </template>
+
+<style scoped lang="postcss">
+
+    body {
+        @apply bg-rmDark;
+    }
+
+</style>
