@@ -28,16 +28,16 @@ const handlePillClick = (pillName: string) => {
     <StandardLayout>
         <div class="m-4 max-w-3xl mx-auto">
             <div class="my-8">
-                <pill name="All" pillColour="green-pill" @pill-click="handlePillClick"/>
             <PageHeading title="CV" />
 
             <PageIntroduction>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sem nec justo pretium gravida. Vivamus diam lorem, accumsan ac laoreet quis, tristique ac ex. Curabitur egestas nisl velit, facilisis ornare metus vulputate non. In hac habitasse platea dictumst.
                 <Link url="/" text="You can download a copy of my latest CV here!"/>
             </PageIntroduction>
-                <pill name="About" pillColour="green-pill" @pill-click="handlePillClick"/>
-                <pill name="Employers" pillColour="green-pill" @pill-click="handlePillClick"/>
-                <pill name="Education" pillColour="green-pill" @pill-click="handlePillClick"/>
+                <pill name="All" pillColour="selected-pill" @pill-click="handlePillClick"/>
+                <pill name="About" pillColour="secondary-pill" @pill-click="handlePillClick"/>
+                <pill name="Employers" pillColour="secondary-pill" @pill-click="handlePillClick"/>
+                <pill name="Education" pillColour="secondary-pill" @pill-click="handlePillClick"/>
             </div>
 
             <div class="content">

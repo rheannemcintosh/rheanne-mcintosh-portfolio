@@ -145,7 +145,7 @@ const decodeSkills = (skillsJson: string): number[] => {
                             </div>
 
                             <span v-for="skillID in decodeSkills(role.skills)" :key="skillID">
-                                <Pill :name="getSkillName(skillID)" pillColour="green-pill" />
+                                <Pill :name="getSkillName(skillID)" pillColour="skill-pill" />
                             </span>
                         </div>
                     </div>
