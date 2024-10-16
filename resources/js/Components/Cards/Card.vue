@@ -13,7 +13,7 @@
 <style scoped lang="postcss">
 
     div {
-        @apply bg-rmLight/10 rounded-md shadow-2xl p-8 mb-8;
+        @apply bg-rmLight/5 rounded-md shadow-2xl p-8 mb-8;
     }
 
 </style>
