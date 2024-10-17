@@ -5,6 +5,7 @@ import { ref, onMounted } from 'vue';
 import CVHeading from "@/Components/CVHeading.vue";
 import { Degree } from '@/types/Degree';
 import Card from "@/Components/Cards/Card.vue";
+import Paragraph from "@/Components/Unique/Paragraph.vue";
 
 // Define the props for the component
 const props = defineProps<{
@@ -100,7 +101,7 @@ onMounted((): void => {
                         :class="{ 'opacity-100 max-h-96': openDegree.includes(degree.id), 'opacity-0 max-h-0': !openDegree.includes(degree.id) }"
                     >
                         <!-- Employer Description -->
-                        <p class="mb-2 text-justify">{{ degree.description }}</p>
+                        <Paragraph>{{ degree.description }}</Paragraph>
                     </div>
                 </div>
             </div>
