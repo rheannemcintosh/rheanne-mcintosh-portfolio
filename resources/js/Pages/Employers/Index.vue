@@ -6,6 +6,7 @@ import { Employer } from '@/types/Employer';
 import Pill from "@/Components/Unique/Pill.vue";
 import {Skill} from "@/types/Skill";
 import Card from "@/Components/Cards/Card.vue";
+import Paragraph from "@/Components/Unique/Paragraph.vue";
 
 // Define the props for the component
 const props = defineProps<{
@@ -124,7 +125,7 @@ const decodeSkills = (skillsJson: string): number[] => {
                         :class="{ 'opacity-100 max-h-96': openEmployers.includes(employer.id), 'opacity-0 max-h-0': !openEmployers.includes(employer.id) }"
                     >
                         <!-- Employer Description -->
-                        <p class="mb-2 text-justify">{{ employer.description }}</p>
+                        <Paragraph>{{ employer.description }}</Paragraph>
 
                         <!-- Employer Responsibilities -->
                         <div v-for="role in employer.roles" :key="role.id">
