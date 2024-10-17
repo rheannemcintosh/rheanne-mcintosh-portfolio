@@ -1,13 +1,19 @@
 <script setup lang="ts">
     import NavigationLink from "@/Components/Unique/NavigationLink.vue";
+    import { usePage } from '@inertiajs/vue3';
+    import { computed } from 'vue';
+
+    const page = usePage();
+    const pages = computed(() => page.props.pages);
 </script>
 
 <template>
+
     <NavigationLink :href="route('home')" :active="route().current('home')">Home</NavigationLink>
-    <NavigationLink :href="route('cv')" :active="route().current('cv')">CV</NavigationLink>
-<!--    <NavigationLink :href="route('skills')" :active="route().current('skills')">Skills</NavigationLink>-->
-<!--    <NavigationLink :href="route('timeline')" :active="route().current('timeline')">Timeline</NavigationLink>-->
-<!--    <NavigationLink :href="route('contact')" :active="route().current('contact')">Contact</NavigationLink>-->
+    <div v-for="page in pages" :key="page.id">
+        <NavigationLink :href="route(page.slug)" :active="route().current(page.slug)">{{ page.title }}</NavigationLink>
+    </div>
+
 </template>
 
 <style scoped>
