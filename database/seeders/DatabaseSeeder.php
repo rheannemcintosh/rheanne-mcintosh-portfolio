@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Database\Seeders\custom\AboutSeeder;
 use Database\Seeders\custom\DegreeSeeder;
 use Database\Seeders\custom\EducationSeeder;
@@ -11,6 +9,8 @@ use Database\Seeders\custom\EmployerSeeder;
 use Database\Seeders\custom\ResponsibilitySeeder;
 use Database\Seeders\custom\RoleSeeder;
 use Illuminate\Database\Seeder;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,11 +31,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            PageSeeder::class,
+            SkillCategorySeeder::class,
+            SkillSeeder::class,
         ]);
 
         foreach ($this->customSeeders as $file => $seederClass) {
