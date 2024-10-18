@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             PageSeeder::class,
             SkillCategorySeeder::class,
             SkillSeeder::class,
+            LearningPlatformSeeder::class,
         ]);
 
         foreach ($this->customSeeders as $file => $seederClass) {
