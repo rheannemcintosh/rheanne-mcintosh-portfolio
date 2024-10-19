@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Database\Seeders\custom\AboutSeeder;
+use Database\Seeders\custom\CourseSeeder;
 use Database\Seeders\custom\DegreeSeeder;
 use Database\Seeders\custom\EducationSeeder;
 use Database\Seeders\custom\EmployerSeeder;
@@ -24,6 +25,7 @@ class DatabaseSeeder extends Seeder
         'database/seeders/custom/EmployerSeeder.php'       => EmployerSeeder::class,
         'database/seeders/custom/RoleSeeder.php'           => RoleSeeder::class,
         'database/seeders/custom/ResponsibilitySeeder.php' => ResponsibilitySeeder::class,
+        'database/seeders/custom/CourseSeeder.php'         => CourseSeeder::class,
     ];
 
     /**
