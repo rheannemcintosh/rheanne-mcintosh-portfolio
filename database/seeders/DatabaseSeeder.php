@@ -7,6 +7,7 @@ use Database\Seeders\custom\CourseSeeder;
 use Database\Seeders\custom\DegreeSeeder;
 use Database\Seeders\custom\EducationSeeder;
 use Database\Seeders\custom\EmployerSeeder;
+use Database\Seeders\custom\LessonSeeder;
 use Database\Seeders\custom\ResponsibilitySeeder;
 use Database\Seeders\custom\RoleSeeder;
 use Illuminate\Database\Seeder;
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
         'database/seeders/custom/RoleSeeder.php'           => RoleSeeder::class,
         'database/seeders/custom/ResponsibilitySeeder.php' => ResponsibilitySeeder::class,
         'database/seeders/custom/CourseSeeder.php'         => CourseSeeder::class,
+        'database/seeders/custom/LessonSeeder.php'         => LessonSeeder::class,
     ];
 
     /**
