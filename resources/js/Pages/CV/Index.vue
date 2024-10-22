@@ -5,9 +5,9 @@ import Pill from "@/Components/Unique/Pill.vue";
 import Education from "@/Pages/Education/Index.vue";
 import Employers from "@/Pages/Employers/Index.vue";
 import About from "@/Pages/CV/Components/About.vue";
-import Navigation from "@/Components/Unique/Navigation.vue";
-import StandardLayout from "@/Layouts/StandardLayout.vue";
 import {Skill} from "@/types/Skill";
+import PageLayout from "@/Layouts/PageLayout.vue";
+
 
 const props = defineProps<{
     professional_summaries?: ProfessionalSummary;
@@ -25,15 +25,11 @@ const handlePillClick = (pillName: string) => {
 </script>
 
 <template>
-    <StandardLayout>
-        <div class="m-4 max-w-3xl mx-auto">
-            <div class="my-8">
-            <PageHeading title="CV" />
-
-            <PageIntroduction>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sem nec justo pretium gravida. Vivamus diam lorem, accumsan ac laoreet quis, tristique ac ex. Curabitur egestas nisl velit, facilisis ornare metus vulputate non. In hac habitasse platea dictumst.
-                <Link url="/" text="You can download a copy of my latest CV here!"/>
-            </PageIntroduction>
+    <PageLayout
+        title="RHEANNE"
+        pageIntroduction="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sem nec justo pretium gravida. Vivamus diam lorem, accumsan ac laoreet quis, tristique ac ex. Curabitur egestas nisl velit, facilisis ornare metus vulputate non. In hac habitasse platea dictumst."
+    >
+            <div class="my-6">
                 <pill name="All" pillColour="selected-pill" @pill-click="handlePillClick"/>
                 <pill name="About" pillColour="secondary-pill" @pill-click="handlePillClick"/>
                 <pill name="Employers" pillColour="secondary-pill" @pill-click="handlePillClick"/>
@@ -45,8 +41,7 @@ const handlePillClick = (pillName: string) => {
                 <Employers v-if="selectedPill === 'All' || selectedPill === 'Employers'" :employers="props.employers" :skills="props.skills" />
                 <Education v-if="selectedPill === 'All' || selectedPill === 'Education'" :degrees="props.degrees" />
             </div>
-        </div>
-    </StandardLayout>
+    </PageLayout>
 </template>
 
 <style scoped>
