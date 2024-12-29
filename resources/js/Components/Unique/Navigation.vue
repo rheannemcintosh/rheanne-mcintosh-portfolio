@@ -10,8 +10,8 @@
 </script>
 
 <template>
-    <nav>
-        <div id="navigation" class="bg-rmDark p-8 xl:px-20">
+    <nav class="bg-rmDark">
+        <div id="navigation" class="p-8 xl:px-20 fixed w-full bg-rmDark">
             <div class="flex items-center justify-between h-20">
 
                 <!-- Logo -->
@@ -21,10 +21,11 @@
                     </span>
                 </div>
 
-                <!-- Navigation Links for Desktop -->
-                <div id="navigation-links" class="hidden md:flex md:space-x-12 md:text-rmLight md:text-bold">
-                    <NavigationLinks />
-                </div>
+                <div>
+                    <!-- Main Navigation Links for Desktop -->
+                    <div id="navigation-links" class="hidden md:flex md:space-x-12 md:text-rmLight md:text-bold justify-end">
+                        <NavigationLinks />
+                    </div>
 
                 <!-- Burger Icon for Mobile -->
                 <div id="burger-icon" class="md:hidden flex">
@@ -32,9 +33,11 @@
                         menu
                     </span>
                 </div>
-
+                </div>
             </div>
         </div>
+
+        <div class="h-20 m-8"></div>
 
         <!-- Navigation Links for Mobile -->
         <div v-if="isMobileMenuVisible" id="mobile-menu">
