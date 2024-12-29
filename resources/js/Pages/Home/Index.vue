@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
 import Navigation from "@/Components/Unique/Navigation.vue";
-import SkillPill from "@/Pages/Home/Components/Skill-Pill.vue";
 import StandardLayout from "@/Layouts/StandardLayout.vue";
 </script>
 
@@ -47,19 +46,6 @@ import StandardLayout from "@/Layouts/StandardLayout.vue";
                                 </div>
                             </div>
                             <div class="m-2">
-                                <div class="m-2 flex justify-center items-center flex-wrap">
-                                    <SkillPill skill="Laravel"/>
-                                    <SkillPill skill="PHP"/>
-                                    <SkillPill skill="Jira"/>
-                                </div>
-                                <div class="m-2 flex justify-center items-center flex-wrap">
-                                    <SkillPill skill="TailwindCSS"/>
-                                    <SkillPill skill="MySQL"/>
-                                </div>
-                                <div class="m-2 flex justify-center items-center flex-wrap">
-                                    <SkillPill skill="Vue.js"/>
-                                    <SkillPill skill="Project Management"/>
-                                </div>
                             </div>
                         </div>
                         <!-- Right Column End -->
