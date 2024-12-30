@@ -2,6 +2,7 @@
     import StandardLayout from "@/Layouts/StandardLayout.vue";
     import Hi from "@/Pages/Home/Sections/Hi.vue";
     import About from "@/Pages/Home/Sections/About.vue";
+    import Education from "@/Pages/Home/Sections/Education.vue";
 </script>
 
 <template>
@@ -11,6 +12,9 @@
         </section>
         <section id="about" class="section text-rmLight border-y-2 border-rmAccent">
             <About />
+        </section>
+        <section id="education" class="section text-rmLight border-y-2 border-rmAccent">
+            <Education />
         </section>
     </StandardLayout>
 </template>
