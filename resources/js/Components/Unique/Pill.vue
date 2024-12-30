@@ -12,9 +12,9 @@
 </script>
 
 <template>
-    <button @click.prevent="handleClick" class="m-1 px-8 py-1 rounded-lg text-white" :class="pillColour">
+    <span @click.prevent="handleClick" class="m-1 px-8 py-1 rounded-lg text-white" :class="pillColour">
         {{ name }}
-    </button>
+    </span>
 </template>
 
 <style scoped>
