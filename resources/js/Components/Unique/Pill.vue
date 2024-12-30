@@ -30,6 +30,6 @@
     }
 
     .skill-pill {
-        @apply border border-rmLight bg-rmDark text-rmLight hover:bg-rmLight/15 text-xs ;
+        @apply border border-rmAccent bg-rmDark text-rmLight hover:bg-rmAccent/15 text-xs ;
     }
 </style>
