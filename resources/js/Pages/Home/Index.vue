@@ -1,12 +1,16 @@
 <script setup lang="ts">
     import StandardLayout from "@/Layouts/StandardLayout.vue";
     import Hi from "@/Pages/Home/Sections/Hi.vue";
+    import About from "@/Pages/Home/Sections/About.vue";
 </script>
 
 <template>
     <StandardLayout>
         <section id="hello" class="section bg-rmDark text-rmLight border-t-2 border-rmAccent">
             <Hi />
+        </section>
+        <section id="about" class="section text-rmLight border-y-2 border-rmAccent">
+            <About />
         </section>
     </StandardLayout>
 </template>
