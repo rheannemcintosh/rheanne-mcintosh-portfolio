@@ -9,8 +9,8 @@
 
     const classes = computed(() =>
         props.active
-            ? 'rounded-xl px-4 py-1 cursor-pointer m-2 w-24 text-center text-rmAccent font-bold bg-rmAccent/10'
-            : 'hover:bg-rmAccent/10 rounded-xl px-4 py-1 cursor-pointer m-2 w-24 text-center'
+            ? 'rounded-t-xl cursor-pointer text-center w-24 px-4 py-1 border-rmAccent border-b-2 bg-rmAccent text-rmDark font-bold'
+            : 'rounded-t-xl cursor-pointer text-center w-24 px-4 py-1 border-rmAccent border-t-2 border-x-2'
     );
 </script>
 

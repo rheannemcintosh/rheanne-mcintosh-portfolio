@@ -23,7 +23,7 @@
 
                 <div>
                     <!-- Main Navigation Links for Desktop -->
-                    <div id="navigation-links" class="hidden md:flex md:space-x-12 md:text-rmLight md:text-bold justify-end">
+                    <div id="navigation-links" class="hidden md:flex md:space-x-4 md:text-rmLight md:text-bold justify-end">
                         <NavigationLinks />
                     </div>
 
