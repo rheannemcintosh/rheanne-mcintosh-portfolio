@@ -12,9 +12,9 @@
 </script>
 
 <template>
-    <button @click.prevent="handleClick" class="m-1 px-8 py-1 rounded-lg text-white" :class="pillColour">
+    <span @click.prevent="handleClick" class="m-1 px-8 py-1 rounded-lg text-white" :class="pillColour">
         {{ name }}
-    </button>
+    </span>
 </template>
 
 <style scoped>
@@ -30,6 +30,6 @@
     }
 
     .skill-pill {
-        @apply border border-rmLight bg-rmDark text-rmLight hover:bg-rmLight/15 text-xs ;
+        @apply border border-rmAccent bg-rmDark text-rmLight hover:bg-rmAccent/15 text-xs ;
     }
 </style>
