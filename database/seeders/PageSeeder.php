@@ -15,7 +15,7 @@ class PageSeeder extends Seeder
         Page::class::create([
             'title' => 'CV',
             'slug' => 'cv',
-            'active' => true,
+            'active' => false,
             'sort_order' => 1,
         ]);
 
