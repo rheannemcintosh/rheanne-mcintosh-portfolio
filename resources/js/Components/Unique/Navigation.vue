@@ -37,7 +37,7 @@
 
                     <!-- Secondary Navigation for Home Page -->
                     <div id="home-secondary-navigation" class="hidden md:flex md:space-x-6 md:text-rmLight md:text-bold justify-center items-center text-xs border-t-2 border-rmAccent">
-                        <a href="#hello" @click.prevent="scrollToSection('hello')" class="cursor-pointer px-4 pt-4">Hello</a>
+                        <a href="#hi" @click.prevent="scrollToSection('hi')" class="cursor-pointer px-4 pt-4">Hi</a>
                         <a href="#about" @click.prevent="scrollToSection('about')" class="cursor-pointer px-4 pt-4">About</a>
                         <a href="#experience" @click.prevent="scrollToSection('experience')" class="cursor-pointer px-4 pt-4">Experience</a>
                         <a href="#education" @click.prevent="scrollToSection('education')" class="cursor-pointer px-4 pt-4">Education</a>
@@ -56,15 +56,10 @@
         <div class="h-20 m-8"></div>
 
         <!-- Navigation Links for Mobile -->
-        <div v-if="isMobileMenuVisible" id="mobile-menu">
+        <div v-if="isMobileMenuVisible" id="mobile-menu" class="border-b-2 border-rmAccent">
             <div class="bg-rmDark text-rmLight p-4">
                 <div class="space-y-4">
                     <NavigationLinks />
-                    <hr class="border-rmLight/50 my-4">
-                    <a href="#hello" @click.prevent="scrollToSection('about')" class="block cursor-pointer">About</a>
-                    <a href="#about" @click.prevent="scrollToSection('about')" class="block cursor-pointer">About</a>
-                    <a href="#experience" @click.prevent="scrollToSection('experience')" class="block cursor-pointer">Experience</a>
-                    <a href="#education" @click.prevent="scrollToSection('education')" class="block cursor-pointer">Education</a>
                 </div>
             </div>
         </div>
@@ -79,6 +74,9 @@
     @media (max-width: 767px) {
         #mobile-menu {
             display: block;
+            z-index: 100;
+            position: fixed;
+            width: 100%;
         }
     }
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div class="max-w-3xl">
-        <div class="flex items-center text-rmLight">
-                <span class="material-symbols-rounded text-5xl text-rmAccent">
-                    person
-                </span>
-            <h1 class="text-rmLight text-5xl font-bold my-8 pl-4">
+    <div class="p-4 md:p-8 max-w-3x md:max-w-4xl">
+        <div class="flex flex-col md:flex-row items-center text-rmLight text-center md:text-left">
+            <span class="material-symbols-rounded text-4xl md:text-5xl text-rmAccent">
+                person
+            </span>
+            <h1 class="text-rmLight text-3xl md:text-5xl font-bold my-4 md:my-8 md:pl-4">
                 About
             </h1>
         </div>

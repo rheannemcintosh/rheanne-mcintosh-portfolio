@@ -8,16 +8,16 @@
 
 <template>
     <StandardLayout>
-        <section id="hello" class="section bg-rmDark text-rmLight border-t-2 border-rmAccent">
+        <section id="hi" class="section bg-rmDark text-rmLight border-t-2 border-rmAccent">
             <Hi />
         </section>
-        <section id="about" class="section text-rmLight border-y-2 border-rmAccent">
+        <section id="about" class="section text-rmLight border-t-2 border-rmAccent">
             <About />
         </section>
-        <section id="education" class="section text-rmLight border-y-2 border-rmAccent">
         <section id="experience" class="section text-rmLight border-t-2 border-rmAccent">
             <Experience />
         </section>
+        <section id="education" class="section text-rmLight border-t-2 border-rmAccent">
             <Education />
         </section>
     </StandardLayout>
@@ -29,5 +29,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+        .section {
+            height: auto; /* Let the content define the height */
+            padding: 2rem 1rem; /* Add padding for spacing */
+        }
     }
 </style>
