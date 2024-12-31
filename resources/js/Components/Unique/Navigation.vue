@@ -24,9 +24,7 @@
 
                 <!-- Logo -->
                 <div id="logo" class="flex">
-                    <span class="material-symbols-rounded text-7xl text-rmLight items-center">
-                        support_agent
-                    </span>
+                    <img :src="'images/rm_logo_green.png'" class="w-16" alt="Logo" />
                 </div>
 
                 <div>
