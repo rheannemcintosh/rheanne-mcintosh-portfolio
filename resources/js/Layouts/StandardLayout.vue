@@ -3,10 +3,12 @@
     // Import the relevant Components
     import Navigation from "@/Components/Unique/Navigation.vue";
     import Footer from "@/Layouts/Components/Footer.vue";
+    import {Head} from "@inertiajs/vue3";
 
 </script>
 
 <template>
+    <Head title="Home" />
 
     <body>
 
